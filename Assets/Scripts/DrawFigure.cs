@@ -12,7 +12,7 @@ public class DrawFigure : MonoBehaviour
 
 
     new private Renderer renderer;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,4 +42,6 @@ public class DrawFigure : MonoBehaviour
         renderer.sharedMaterial.SetFloat("CY", (tly + bry / 2) / t.height);
         renderer.sharedMaterial.SetFloat("R", bry / (2 * t.height));
     }
+
+
 }
