@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class DrawFigure : MonoBehaviour
 {
-    [DllImport("OCVWrapper", EntryPoint = "detectFace", CallingConvention = CallingConvention.StdCall)]
+    [DllImport("DLL1", EntryPoint = "detectFace", CallingConvention = CallingConvention.StdCall)]
     public static extern void detectFace(long length, int width, int height, byte[] data, out float tlx, out float tly, out float brx, out float bry);
-    [DllImport("OCVWrapper", EntryPoint = "loadClassifier", CallingConvention = CallingConvention.StdCall)]
+    [DllImport("DLL1", EntryPoint = "loadClassifier", CallingConvention = CallingConvention.StdCall)]
     public static extern void loadClassifier();
 
 
@@ -16,7 +16,16 @@ public class DrawFigure : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        renderer = GetComponent<Renderer>();
+        renderer = GetComponent<Renderer>() as Renderer;
+        renderer.material.shader = Shader.Find("DrawCircleShader");
+
+        renderer.sharedMaterial.SetFloat("CX", 0.5f);
+        renderer.sharedMaterial.SetFloat("CY", 0.5f);
+        renderer.sharedMaterial.SetFloat("R", 0.2f);
+
+
+        loadClassifier();
+        renderer.sharedMaterial.SetInt("IsOn", 1);
     }
 
     // Update is called once per frame

@@ -15,11 +15,11 @@ public class PhysicalCameraStreamer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
         webcamTexture = new WebCamTexture();
         renderer = GetComponent<Renderer>();
         renderer.material.mainTexture = webcamTexture;
-
+        Play();
     }
 
     public void Play() => webcamTexture.Play();
