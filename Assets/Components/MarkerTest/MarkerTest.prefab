@@ -777,6 +777,25 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Kitchen in the dungeon
+--- !u!114 &176523474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334034906320518839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ee5c2d51fbc6744a90cf9595ee5a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerCanvasObject: {fileID: 7024457846370288717}
+  MarkerObjectName: 
+  childrenList: []
+  a: 1
+  b: 1
+  c: 0
+  d: 0
 --- !u!1 &5860529323041924759
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,26 +955,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &176523474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6334034906320518839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ee5c2d51fbc6744a90cf9595ee5a9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  markerCanvasObject: {fileID: 7024457846370288717}
-  MarkerObjectName: 
-  childrenList: []
-  timeBeforeContinue: 2
-  a: 1
-  b: 1
-  c: 0
-  d: 0
 --- !u!1 &6875540190301322503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1287,7 @@ PrefabInstance:
     - target: {fileID: 1850747304783714829, guid: 5c82076f5891d7647b4190a87b3615ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1850747304783714829, guid: 5c82076f5891d7647b4190a87b3615ce,
         type: 3}
@@ -1338,7 +1337,7 @@ PrefabInstance:
     - target: {fileID: 1850747304783715057, guid: 5c82076f5891d7647b4190a87b3615ce,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3401287403978560896, guid: 5c82076f5891d7647b4190a87b3615ce,
         type: 3}
@@ -1391,7 +1390,7 @@ PrefabInstance:
       value: Proceed
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5534658054264516414, guid: 5c82076f5891d7647b4190a87b3615ce, type: 3}
+    - {fileID: 6749545780810116291, guid: 5c82076f5891d7647b4190a87b3615ce, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5c82076f5891d7647b4190a87b3615ce, type: 3}
 --- !u!1 &6334034906320518839 stripped
 GameObject:

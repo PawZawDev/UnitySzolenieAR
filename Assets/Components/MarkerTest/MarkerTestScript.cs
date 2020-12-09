@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // MarkerTestScript is a marker with a test
-public class MarkerTestScript : MarkerScript
+public class MarkerTestScript : MarkerScript, MarkerScriptInterface
 {
     private Button proceedButton; // button to proceed the test
     private Toggle aToggle;       // answer a toggle

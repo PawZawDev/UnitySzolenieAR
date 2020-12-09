@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // MarkerContinueScript is a marker with some information and the continue button
-public class MarkerContinueScript : MarkerScript
+public class MarkerContinueScript : MarkerScript, MarkerScriptInterface
 {
     
     public float timeBeforeContinue; // time before the continue button is avilable
