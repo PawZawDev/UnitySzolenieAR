@@ -26,11 +26,11 @@ public class MarkerTestScript : MarkerScript, MarkerScriptInterface
     // Start is called before the first frame update
     private new void Start()
     {
-        onProceedButtonAction = OnProceedButtonClick;
+        //onProceedButtonAction = OnProceedButtonClick;
 
         base.Start();
         proceedButton = markerCanvasObject.transform.Find("ProceedButton").GetComponent<Button>();
-        proceedButton.onClick.AddListener(delegate { StartCoroutine("onProceedButtonAction"); }); // added delegate listener to perform an action on button click
+        proceedButton.onClick.AddListener(delegate { StartCoroutine("OnProceedButtonClick"); }); // added delegate listener to perform an action on button click
 
         // recieve the correct answers
         aToggle = markerCanvasObject.transform.Find("AToggle").GetComponent<Toggle>();
