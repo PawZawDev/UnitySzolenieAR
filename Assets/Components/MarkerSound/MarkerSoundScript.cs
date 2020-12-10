@@ -16,7 +16,7 @@ public class MarkerSoundScript : MarkerScript, MarkerScriptInterface
     {
         base.Start();
         audioSource = GetComponent<AudioSource>();
-        continueButton = markerCanvasObject.transform.Find("ContinueButton").GetComponent<Button>();
+        continueButton = markerCanvasObject.transform.Find("PressableButtonUnityUI").GetComponent<Button>();
         continueButton.gameObject.SetActive(false);
         continueButton.onClick.AddListener(delegate { StartCoroutine("OnContinueButtonClick"); });
     }
@@ -49,5 +49,10 @@ public class MarkerSoundScript : MarkerScript, MarkerScriptInterface
         continueButton.gameObject.SetActive(false);
         yield return new WaitForSeconds(2);
         OnMarkerEnd();
+    }
+
+    public void ContinueButton()
+    {
+        StartCoroutine("OnContinueButtonClick");
     }
 }

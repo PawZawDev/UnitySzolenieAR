@@ -16,7 +16,7 @@ public class MarkerContinueScript : MarkerScript, MarkerScriptInterface
     private new void Start()
     {
         base.Start();
-        continueButton = markerCanvasObject.transform.Find("ContinueButton").GetComponent<Button>();
+        continueButton = markerCanvasObject.transform.Find("PressableButtonUnityUI").GetComponent<Button>();
         continueButton.gameObject.SetActive(false);
         continueButton.onClick.AddListener(delegate { StartCoroutine("OnContinueButtonClick"); });
     }

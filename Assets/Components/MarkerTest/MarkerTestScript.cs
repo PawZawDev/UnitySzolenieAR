@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.MixedReality.Toolkit.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,10 @@ using UnityEngine.UI;
 public class MarkerTestScript : MarkerScript, MarkerScriptInterface
 {
     private Button proceedButton; // button to proceed the test
-    private Toggle aToggle;       // answer a toggle
-    private Toggle bToggle;       // answer b toggle
-    private Toggle cToggle;       // answer c toggle
-    private Toggle dToggle;       // answer d toggle
+    private Interactable aToggle;       // answer a toggle
+    private Interactable bToggle;       // answer b toggle
+    private Interactable cToggle;       // answer c toggle
+    private Interactable dToggle;       // answer d toggle
     private string endingText = "good answer, you can go ahead!";         // text displayed when the answer is correct
     private string wrongEndingText = "wrong answer, you can't go ahead!"; // text displayed when the answer is wrong
 
@@ -29,21 +30,22 @@ public class MarkerTestScript : MarkerScript, MarkerScriptInterface
         //onProceedButtonAction = OnProceedButtonClick;
 
         base.Start();
-        proceedButton = markerCanvasObject.transform.Find("ProceedButton").GetComponent<Button>();
+        proceedButton = markerCanvasObject.transform.Find("PressableButtonUnityUI").GetComponent<Button>();
         proceedButton.onClick.AddListener(delegate { StartCoroutine("OnProceedButtonClick"); }); // added delegate listener to perform an action on button click
 
         // recieve the correct answers
-        aToggle = markerCanvasObject.transform.Find("AToggle").GetComponent<Toggle>();
-        bToggle = markerCanvasObject.transform.Find("BToggle").GetComponent<Toggle>();
-        cToggle = markerCanvasObject.transform.Find("CToggle").GetComponent<Toggle>();
-        dToggle = markerCanvasObject.transform.Find("DToggle").GetComponent<Toggle>();
+
+        aToggle = markerCanvasObject.transform.Find("AToggleMRTK").GetComponent<Interactable>();
+        bToggle = markerCanvasObject.transform.Find("BToggleMRTK").GetComponent<Interactable>();
+        cToggle = markerCanvasObject.transform.Find("CToggleMRTK").GetComponent<Interactable>();
+        dToggle = markerCanvasObject.transform.Find("DToggleMRTK").GetComponent<Interactable>();
     }  
 
     // What happens when the proceed button is clicked
     public IEnumerator OnProceedButtonClick()   
     {
 
-        if(a == aToggle.isOn && b == bToggle.isOn && c == cToggle.isOn && d == dToggle.isOn) // answers are correct
+        if(a == aToggle.IsToggled && b == bToggle.IsToggled && c == cToggle.IsToggled && d == dToggle.IsToggled) // answers are correct
         {
             markerCanvasObject.transform.Find("MarkerText").GetComponent<Text>().text = endingText;
             yield return new WaitForSeconds(2);
@@ -59,5 +61,10 @@ public class MarkerTestScript : MarkerScript, MarkerScriptInterface
         }
         
         
+    }
+
+    public void ProceedButton()
+    {
+        StartCoroutine("OnProceedButtonClick");
     }
 }

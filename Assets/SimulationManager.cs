@@ -16,7 +16,7 @@ public class SimulationManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            var spawnedAudioMarker = Instantiate(audioMarker, transform.position + new Vector3(0, 0, 10), Quaternion.identity);
+            var spawnedAudioMarker = Instantiate(audioMarker, transform.position + new Vector3(0, 0, 3), Quaternion.identity);
             spawnedAudioMarker.SetActive(true);
             if (parentMarker != null)
             {
@@ -27,7 +27,7 @@ public class SimulationManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            var spawnedTestMarker = Instantiate(testMarker, transform.position + new Vector3(0, 0, 10), Quaternion.identity);
+            var spawnedTestMarker = Instantiate(testMarker, transform.position + new Vector3(0, 0, 3), Quaternion.identity);
             spawnedTestMarker.SetActive(true);
             if (parentMarker != null)
             {
@@ -38,7 +38,7 @@ public class SimulationManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            var spawnedContinuesMarker = Instantiate(continueMarker, transform.position + new Vector3(0, 0, 10), Quaternion.identity);
+            var spawnedContinuesMarker = Instantiate(continueMarker, transform.position + new Vector3(0, 0, 3), Quaternion.identity);
             spawnedContinuesMarker.SetActive(true);
             if (parentMarker != null)
             {
