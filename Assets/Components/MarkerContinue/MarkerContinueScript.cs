@@ -48,4 +48,9 @@ public class MarkerContinueScript : MarkerScript
         yield return new WaitForSeconds(2);
         OnMarkerEnd();
     }
+
+    public void ContinueButton()
+    {
+        StartCoroutine("OnContinueButtonClick");
+    }
 }
