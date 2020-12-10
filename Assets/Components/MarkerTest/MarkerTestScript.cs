@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // MarkerTestScript is a marker with a test
-public class MarkerTestScript : MarkerScript
+public class MarkerTestScript : MarkerScript, MarkerScriptInterface
 {
     private Button proceedButton; // button to proceed the test
     private Toggle aToggle;       // answer a toggle
@@ -26,11 +26,11 @@ public class MarkerTestScript : MarkerScript
     // Start is called before the first frame update
     private new void Start()
     {
-        onProceedButtonAction = OnProceedButtonClick;
+        //onProceedButtonAction = OnProceedButtonClick;
 
         base.Start();
         proceedButton = markerCanvasObject.transform.Find("ProceedButton").GetComponent<Button>();
-        proceedButton.onClick.AddListener(delegate { StartCoroutine("onProceedButtonAction"); }); // added delegate listener to perform an action on button click
+        proceedButton.onClick.AddListener(delegate { StartCoroutine("OnProceedButtonClick"); }); // added delegate listener to perform an action on button click
 
         // recieve the correct answers
         aToggle = markerCanvasObject.transform.Find("AToggle").GetComponent<Toggle>();

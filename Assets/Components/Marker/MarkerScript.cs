@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // MarkerScript- abstract class to be a base for different markers
-public abstract class MarkerScript : MonoBehaviour
+public abstract class MarkerScript : MonoBehaviour, MarkerScriptInterface
 {
     public GameObject markerCanvasObject; // Canvas object responsible for the text and buttons above the marker
     public string MarkerObjectName;          // The name of the marker
@@ -70,10 +70,16 @@ public abstract class MarkerScript : MonoBehaviour
     // What happens when the marker is about to end its life
     protected void OnMarkerEnd()
     {
-        foreach(GameObject go in childrenList)
+        foreach (GameObject go in childrenList)
         {
             go.SetActive(true);
         }
         this.gameObject.SetActive(false);
+    }
+
+
+    public void AddNextMarker(GameObject nextMarker)
+    {
+        childrenList.Add(nextMarker);
     }
 }

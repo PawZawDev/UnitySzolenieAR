@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &5534658054264516414
+--- !u!114 &6749545780810116291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   markerCanvasObject: {fileID: 3401287404631810059}
   MarkerObjectName: 
-  childrenList:
-  - {fileID: 0}
-  timeBeforeContinue: 5
-  endingText: Click to proceed
+  childrenList: []
+  timeBeforeContinue: 0
+  endingText: 
 --- !u!1001 &3401287405212669929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37,7 +36,7 @@ PrefabInstance:
     - target: {fileID: 3935266473476558308, guid: 5ad098b72ac6ace4787bd8769a720b20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3935266473476558308, guid: 5ad098b72ac6ace4787bd8769a720b20,
         type: 3}
@@ -47,7 +46,7 @@ PrefabInstance:
     - target: {fileID: 3935266473476558308, guid: 5ad098b72ac6ace4787bd8769a720b20,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3935266473476558308, guid: 5ad098b72ac6ace4787bd8769a720b20,
         type: 3}

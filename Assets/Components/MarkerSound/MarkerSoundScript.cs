@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // MarkerSoundScript is a marker with a sound effect and continue button
-public class MarkerSoundScript : MarkerScript
+public class MarkerSoundScript : MarkerScript, MarkerScriptInterface
 {
     private AudioSource audioSource;  // object that handles playing the sound
     private float timeBeforeContinue; // time before the continue button appears
